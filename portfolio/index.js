@@ -102,14 +102,70 @@ listSeasons.addEventListener('click', activeBtnSeason);
 function activeBtnSeason(event) {
   seasons.forEach(elem => elem.classList.remove('active-season'));
   if (event.target.classList.contains('season')) {
-    event.target.classList.add('active-season')
-    portfolioImages.forEach((img, index) => img.src = `../portfolio/assets/images/seasons/${event.target.dataset.seasons}/${index + 1}.jpg`)
+    event.target.classList.add('active-season');
+    let nameBtn = event.target.textContent;
+    portfolioImages.forEach((img, index) => img.src = `./assets/images/seasons/${nameBtn}/${index + 1}.jpg`);
   }
 }
 
-// function setPortfolioSeason(event) {
- 
-// }
+const elemSvg = document.querySelectorAll('.topic');
+const topics = document.querySelector('.topics');
+const sunSvg = document.querySelector('.sun-svg');
+const lunaSvg = document.querySelector('.luna-svg');
+const changeTopic = document.querySelectorAll('.change-topic');
+const links = document.querySelectorAll('.link');
+const lines = document.querySelectorAll('.line');
+const themeBtns = document.querySelectorAll('.theme-btn');
+const mainContainer = document.querySelector('.main-container');
+const body = document.querySelector('body');
+
+
+topics.addEventListener('mouseover', addHover);
+topics.addEventListener('mouseout', removeHover);
+topics.addEventListener('click', toggleTopicSvg);
+
+function toggleTopicSvg(event) {
+  if (event.target.classList.contains('sun-svg')) {
+    event.target.classList.add('toggle-topic')
+    toggleTopic(event)
+    lunaSvg.classList.remove('toggle-topic');
+  } else if (event.target.classList.contains('luna-svg')) {
+    event.target.classList.add('toggle-topic')
+    sunSvg.classList.remove('toggle-topic');
+    toggleTopic(event)
+  }
+}
+
+function removeHover(event) {
+  if (event.target.classList.contains('topic-svg')) {
+    elemSvg.forEach(elem => elem.classList.remove('active-switch'))
+  }
+} 
+
+function addHover(event) {
+  if (event.target.classList.contains('topic-svg')) {
+    elemSvg.forEach(elem => elem.classList.add('active-switch'))
+  }
+}
+
+function toggleTopic() {
+  if (event.target.classList.contains('sun-svg')) {
+    changeTopic.forEach((elem) => elem.classList.add('active-topic'));
+    links.forEach((elem) => elem.style.color = '#1C1C1C');
+    lines.forEach((line) => line.style.background = '#1C1C1C');
+    themeBtns.forEach((btn) => btn.classList.add('change-theme-btn'));
+    mainContainer.style.background = `url(./assets/images/bg.jpg)`;
+    mainContainer.style.backgroundSize = 'cover'
+    body.classList.add('change-body');
+  } else if (event.target.classList.contains('luna-svg')) {
+    changeTopic.forEach((elem) => elem.classList.remove('active-topic'));
+    links.forEach((elem) => elem.style.color = '#ffffff');
+    lines.forEach((line) => line.style.background = '#BDAE82');
+    themeBtns.forEach((btn) => btn.classList.remove('change-theme-btn'));
+    mainContainer.style.background = `url(./assets/images/photo.jpg)`;
+    body.classList.remove('change-body');
+  }
+}
 
 
 

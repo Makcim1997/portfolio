@@ -34,6 +34,25 @@ button:hover {
   transition: .5s;
 }
 
+.active-topic {
+  color: #1C1C1C;
+  transition: .5s;
+}
+
+.change-body {
+  background: #fff;
+  transition: .5s;
+}
+
+.change-theme-btn {
+  background: #fff;
+}
+
+.change-theme-btn:hover {
+  background-color: #1C1C1C;
+  color: #BDAE82;
+}
+
 /*===== Header =====*/
 
 .header-wrapper {
@@ -66,6 +85,7 @@ button:hover {
 
 .nav-container {
   display: flex;
+  align-items: center;
 }
 
 .navigation {
@@ -75,6 +95,23 @@ button:hover {
 .list {
   display: flex;
   margin-right: 3px;
+}
+
+.topic {
+  cursor: pointer;
+}
+
+.toggle-topic {
+  display: none;
+}
+
+.topic-svg {
+  cursor: pointer;
+}
+
+.active-switch {
+  fill: #BDAE82;
+  transition: .3s;
 }
 
 .chapter {
@@ -92,16 +129,17 @@ button:hover {
 }
 
 .switch-lang {
-  width: 75px;
+  width: 80px;
   height: 35px;
   font-weight: 700;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .active-lang {
   color: #BDAE82;
   transition: 0.5s;
-  font-size: 24px;
 }
 
 .dash {
@@ -379,7 +417,7 @@ button:hover {
   display: none;
 }
 
-.svg:hover {
+.btn-play-svg:hover {
   color: #BDAE82;
   transition: 0.5s;
   cursor: pointer;
@@ -552,16 +590,6 @@ button:hover {
   margin: 0 19px;
 }
 
-.link-social {
-  color: #fff;
-  transition: 0.5s;
-}
-
-.link-social:hover {
-  color: #BDAE82; 
-  transition: 0.5s;
-}
-
 /*===== Footer =====*/
 
 /*===== MAIN =====*/
@@ -647,6 +675,8 @@ button:hover {
 
   .switch-lang {
     margin-right: 5px;
+    height: 25px;
+    width: 95px;
   }
 
   .lang-ru {
