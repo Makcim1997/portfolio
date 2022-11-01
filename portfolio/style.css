@@ -1,0 +1,1108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #fff;
+  background-color: #000;
+  font-size: 20px;
+}
+
+button {
+  background: #BDAE82;
+  font-family: 'inter';
+  font-size: 20px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+button:active {
+  background:  #b4994b;
+}
+
+button:hover {
+  color: #fff;
+  transition: .5s;
+}
+
+/*===== Header =====*/
+
+.header-wrapper {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  font-family: 'Inter';
+  z-index: 1;
+}
+
+.header-item {
+  display: none;
+}
+
+.logo {
+  margin: 18px 0;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.logo:hover {
+  color: #BDAE82;
+  transition: 0.5s;
+}
+
+.nav-container {
+  display: flex;
+}
+
+.navigation {
+  padding: 0 15px
+}
+
+.list {
+  display: flex;
+  margin-right: 3px;
+}
+
+.chapter {
+  margin: 0 15px;
+}
+
+.link {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.link:hover {
+  color: #BDAE82;
+  transition: 0.5s;
+}
+
+.switch-lang {
+  width: 75px;
+  height: 35px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.active-lang {
+  color: #BDAE82;
+  transition: 0.5s;
+  font-size: 24px;
+}
+
+.dash {
+  margin-left: 4px;
+}
+
+.lang-ru {
+  margin-left: 3px;
+}
+
+/*===== Header =====*/
+
+/*===== MAIN =====*/
+
+/*===== Hero =====*/
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'inter';
+}
+
+.main-container {
+  width: 100%;
+  height: 910px;
+  background-image: url(./assets/images/photo.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.hero {
+  max-width: 500px;
+  margin-left: 60px;
+  margin-top: 254px;
+}
+
+.hero-title {
+  font-size: 60px;
+  padding: 22px 0;
+  font-family: 'Merriweather';
+  margin-bottom: 5px;
+}
+
+.hero-text {
+  font-size: 20px;
+  line-height: 40px;
+  margin-bottom: 26px;
+}
+
+.hero-btn {
+  padding: 16px 73px;
+}
+
+/*===== Hero =====*/
+
+/*===== Skills =====*/
+
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.section-skills {
+  padding: 114px 20px 124px;
+  font-family: 'inter';
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 75px;
+  color: #BDAE82;
+  width: 100%;
+}
+
+.first-line {
+  max-width: 274px;
+  flex-grow: 1;
+}
+
+.section-header {
+  font-size: 40px;
+  font-family: 'Merriweather';
+  margin: 0 20px;
+}
+
+.line {
+  height: 2px;
+  background: #BDAE82;
+}
+
+.skills-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.first-block {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
+.second-block {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  width: 100%;
+}
+
+.picture {
+  margin-bottom: 58px;
+}
+
+.head {
+  margin-bottom: 29px;
+  font-weight: 700;
+}
+
+.text {
+  max-width: 280px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+/*===== Skills =====*/
+
+/*===== Porfolio =====*/
+
+.section-portfolio {
+  padding: 0 20px 94px;
+}
+
+.second-line {
+  max-width: 240px;
+  flex-grow: 1;
+}
+
+.list-seasons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 895px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.season {
+  border: 2px solid #BDAE82;
+  color: #BDAE82;
+  background: #000;
+  text-align: center;
+  line-height: 52px;
+  max-width: 220px;
+  width: 100%;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.season:nth-child(2) {
+  margin: 0 5px;
+}
+
+.season:nth-child(3) {
+  margin-right: 5px;
+}
+
+.season:hover {
+  color: #fff;
+  transition: all .5s;
+}
+
+.active-season {
+  background: #BDAE82;
+  color: #000;
+}
+
+.collection-photo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+}
+
+.photo {
+  width: 100%;
+}
+
+/*===== Porfolio =====*/
+
+/*===== Video =====*/
+
+.section-video {
+  margin-bottom: 95px;
+  padding: 20px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.third-line {
+  max-width: 272px;
+  flex-grow: 1;
+}
+
+.items-video {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.active-items {
+  display: none;
+}
+
+.video-player {
+  width: 100%;
+  height: 100%;
+}
+
+.pause {
+  margin: 0 5px
+}
+
+.btn-play {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.item {
+  cursor: pointer;
+}
+
+.active-btn {
+  display: none;
+}
+
+.svg:hover {
+  color: #BDAE82;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.progress {
+  max-width: 75%;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+/*===== Video =====*/
+
+/*===== Price =====*/
+
+.section-price {
+  padding: 0 20px;
+  margin-bottom: 100px;
+}
+
+.four-line {
+  max-width: 278px;
+  flex-grow: 1;
+}
+
+.price-items {
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.price-item {
+  border: 3px solid #BDAE82;
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  height: 505px;
+}
+
+.price-item:nth-child(2) {
+  margin: 0 25px;
+}
+
+.type {
+  font-family: 'Merriweather';
+  font-size: 28px;
+  line-height: 56px;
+  margin: 40px 0 19px 0;
+}
+
+.price {
+  font-family: 'Merriweather';
+  font-size: 24px;
+  line-height: 48px;
+  color: #BDAE82;
+  margin-bottom: 28px;
+}
+
+.list-services {
+  margin-bottom: 50px;
+}
+
+.service {
+  font-size: 18px;
+}
+
+.service:nth-child(2) {
+  margin: 14px 0;
+}
+
+.service:nth-child(4) {
+  margin: 14px 0;
+}
+
+.btn-order {
+  padding: 15px 40px;
+}
+
+/*===== Price =====*/
+
+/*===== Contacts =====*/
+
+.section-contacts {
+  width: 100%;
+  padding-bottom: 193px;
+  background-image: url(./assets/images/photog.jpg);
+  background-size: cover;
+  background-position-x: center;
+}
+
+.container-contacts {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content-contacts {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  flex-grow: 1;
+  margin-top: 75px;
+}
+
+.header-section {
+  font-family: 'Merriweather';
+  font-size: 40px;
+  color: #BDAE82;
+}
+
+.email {
+  margin: 55px 0 20px;
+}
+
+.field {
+  background: rgba(0, 0, 0, 0.5);;
+  border: 2px solid #BDAE82;
+  height: 50px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.field::placeholder {
+  font-size: 20px;
+  color: #BDAE82;
+  padding-left: 20px;
+  line-height: 40px;
+  font-family: 'inter';
+}
+
+.message {
+  margin: 20px 0 30px;
+  height: 100px;
+}
+
+.send-btn {
+  max-width: 220px;
+  padding: 15px 0;
+}
+
+/*===== Contacts =====*/
+
+/*===== Footer =====*/
+
+.footer {
+  max-width: 1440px;
+  width: 100%;
+  padding: 58px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.data:nth-child(2) {
+  margin: 0 15px;
+}
+
+.social-list {
+  display: flex;
+}
+
+.social:nth-child(1) {
+  margin-right: 19px;
+}
+
+.social:nth-child(3) {
+  margin: 0 19px;
+}
+
+.link-social {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.link-social:hover {
+  color: #BDAE82; 
+  transition: 0.5s;
+}
+
+/*===== Footer =====*/
+
+/*===== MAIN =====*/
+
+@media (max-width: 1130px) {
+  .first-block {
+    padding: 0;
+    margin-bottom: 76px;
+  }
+
+  .second-block {
+    padding: 0;
+  }
+}
+
+@media (max-width: 941px) {
+  .list-seasons {
+    max-width: 470px;
+    padding: 3px 0;
+    margin-bottom: 55px;
+  }
+
+  .season:nth-child(1) {
+    margin: 0 5px 5px 0;
+  }
+
+  .season:nth-child(2) {
+    margin: 0 0 5px;
+  }
+}
+
+@media (max-width: 781px) {
+
+  .price-items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .price-item:nth-child(2) {
+    margin: 50px 0 50px;
+  }
+
+  .price-item {
+    max-width: 423px;
+    height: 504px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /*===== Header =====*/
+
+  .header-wrapper {
+    padding: 0 60px;
+  }
+
+  .nav-container {
+    align-items: center;
+  }
+
+  .navigation {
+    transform: translateX(100%);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 148px;
+    width: 620px;
+    transition: 1s;
+    background: #000;
+  }
+
+  .active-navigation {
+    transform: translateX(0%);
+    z-index: 2;
+  }
+
+  .list {
+    flex-direction: column;
+    margin-top: 134px;
+    margin-left: 127px;
+    line-height: 72px;
+    font-size: 32px;
+  }
+
+  .switch-lang {
+    margin-right: 5px;
+  }
+
+  .lang-ru {
+    margin-left: 15px;
+  }
+
+  /*===== Header =====*/
+
+  /*===== Hero =====*/
+
+  .main-container {
+    background-position: 0px -28px;
+    height: 614px;
+  }
+
+  .blackout {
+    display: block;
+    background:rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .hero {
+    margin-top: 167px;
+    margin-left: 39px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    padding: 12px 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-text {
+    line-height: 24px;
+    max-width: 390px;
+    margin-bottom: 60px;
+  }
+
+   /*===== Hero =====*/
+
+   /*===== Skills =====*/
+
+  .section-skills {
+    padding: 74px 20px 100px;
+  }
+
+  .section-title {
+    margin-bottom: 67px;
+  }
+
+  .section-header {
+    font-size: 32px;
+  }
+
+  .skills-items {
+    padding: 0 32px;
+  }
+
+  .first-block {
+    margin-bottom: 0;
+  }
+
+  .first-line {
+    max-width: 117px;
+  }
+
+  .skill-item {
+    padding-right: 2px;
+  }
+
+  .picture {
+    margin-bottom: 37px;
+  }
+
+  .skill-item:nth-child(2){
+    margin: 0 0 76px;
+  }
+
+  .skill-item:nth-child(3){
+    margin: 0 0;
+  }
+
+  .text {
+    line-height: 22px;
+  }
+
+    /*===== Skills =====*/
+
+    /*===== Portfolio =====*/
+
+  .section-portfolio {
+    padding: 3px 0 80px;
+  }
+
+  .second-line {
+    max-width: 89px;
+  }
+
+  .collection-photo {
+    grid-template-columns: 1fr;
+  }
+
+    /*===== Portfolio =====*/
+
+    /*===== Video =====*/
+
+  .section-video {
+    padding: 20px 0 129px;
+    margin: 0;
+  }
+
+  .title-column {
+    margin-bottom: 72px;
+  }
+
+  .third-line {
+    max-width: 117px;
+  }
+
+  .btn-play-svg {
+    height: 65px;
+    margin-top: 28px;
+  }
+
+  .svg:hover {
+    color: #b4994b;
+  }
+
+    /*===== Video =====*/
+
+    /*===== Price =====*/
+
+    .section-price {
+      margin-bottom: 85px;
+    }
+
+    .title-price {
+      margin-bottom: 69px;
+    }
+
+    .four-line {
+      max-width: 121px;
+    }
+
+    .type {
+      margin: 44px 0 20px 0;
+    }
+
+    /*===== Price =====*/
+
+    /*===== Contact =====*/
+
+    .section-contacts {
+      padding-bottom: 109px;
+      background-position-x: center;
+    }
+
+    .container-contacts {
+      justify-content: center;
+    }
+
+    .content-contacts {
+      margin-top: 71px;
+    }
+
+    .header-section {
+      font-size: 32px;
+      margin: 0 auto;
+    }
+
+    .send-btn {
+      margin: 0 auto;
+      padding: 15px 40px;
+    }
+
+    /*===== Contact =====*/
+
+    /*===== Footer =====*/
+
+    .footer {
+      flex-direction: column;
+      padding: 29px 20px;
+    }
+
+    .link-social {
+      margin-top: 17px;
+      margin-bottom: 28px;
+    }
+    /*===== Footer =====*/
+}
+
+@media (max-width: 531px) {
+  /*===== Header =====*/
+
+  .header-wrapper {
+    padding: 0 10px;
+  }
+
+  .nav-container {
+    font-size: 15px;
+    max-width: 55%;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .logo-svg {
+    width: 40px;
+  }
+
+  .fixed-btn {
+    right: 10px;
+  }
+
+  .navigation {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .list {
+    margin: 120px 0 0 30px;
+    line-height: 50px;
+    font-size: 24px;
+  }
+
+  .lang-ru {
+    margin-left: 5px;
+  }
+
+  /*===== Header =====*/
+
+  /*===== Hero =====*/
+
+  .main-container {
+    background-position: 5px 0;
+    height: 325px;
+  }
+
+  .main-content {
+    padding: 0 10px;
+  }
+
+  .hero {
+    margin: 120px 0 0 10px;
+  }
+
+  .hero-title {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero-text {
+    line-height: 20px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    max-width: 260px;
+  }
+
+  .hero-btn {
+    padding: 10px 50px;
+    font-size: 15px;
+  }
+
+  /*===== Hero =====*/
+
+  /*===== Skills =====*/
+
+  .section-wrapper {
+    padding: 25px 10px 10px;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .line {
+    max-width: 50px;
+  }
+
+  .section-header {
+    font-size: 26px;
+    margin: 0 10px;
+  }
+
+  .skills-items {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .first-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .second-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-item:nth-child(2) {
+    margin-bottom: 30px;
+  }
+
+  .skill-item {
+    margin-bottom: 30px;
+  }
+
+  .picture {
+    width: 50px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .head {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .text {
+    line-height: 15px;
+    font-size: 13px;
+  }
+
+  /*===== Skills =====*/
+
+  /*===== Portfolio =====*/
+
+  .list-seasons {
+    margin-bottom: 20px;
+    padding: 0;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .season:nth-child(1) {
+    margin: 0 0 5px;
+  }
+
+  .season:nth-child(3) {
+    margin: 0 0 5px;
+  }
+
+  /*===== Portfolio =====*/
+
+  /*===== Video =====*/
+
+  .btn-play-svg {
+    height: 50px;
+  }
+
+  /*===== Video =====*/
+
+  /*===== Price =====*/
+
+  .section-price {
+    margin-bottom: 30px;
+  }
+
+  .price-item {
+    height: 360px;
+  }
+
+  .price-item:nth-child(2) {
+    margin: 20px 0;
+  }
+
+  .type {
+    margin: 10px 0 0;
+    font-size: 24px;
+  }
+
+  .price {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .list-services {
+    margin-bottom: 30px;
+  }
+
+  .service:nth-child(2) {
+    margin: 10px 0;
+  }
+
+  .service:nth-child(4) {
+    margin: 10px 0;
+  }
+
+  .btn-order {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+
+  /*===== Price =====*/
+
+  /*===== Contacts =====*/
+
+  .section-contacts {
+    padding-bottom: 50px;
+    background-position: -160px 0;
+  }
+
+  .container-contacts {
+    padding: 0 10px;
+  }
+
+  .content-contacts {
+    margin-top: 30px;
+  }
+
+  .email {
+    margin: 30px 0 20px;
+  }
+
+  .send-btn {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+
+  /*===== Contacts =====*/
+
+
+  /*===== Footer =====*/
+
+  .footer {
+    padding: 15px 10px;
+    font-size: 15px;
+  }
+
+  .link-social {
+    margin: 10px 0 10px;
+  }
+
+  .field {
+    padding: 0 10px;
+  }
+
+  .svg-soc {
+    width: 24px;
+  }
+
+  /*===== Footer =====*/
+
+}
+
+
+
+
