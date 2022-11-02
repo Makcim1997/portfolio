@@ -106,7 +106,7 @@ function activeBtnSeason(event) {
   seasons.forEach(elem => elem.classList.remove('active-season'));
   if (event.target.classList.contains('season')) {
     event.target.classList.add('active-season');
-    let nameBtn = event.target.textContent;
+    let nameBtn = event.target.textContent.toLowerCase();
     portfolioImages.forEach((img, index) => img.src = `./assets/images/seasons/${nameBtn}/${index + 1}.jpg`);
   }
 }
