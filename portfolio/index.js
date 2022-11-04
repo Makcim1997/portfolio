@@ -72,9 +72,9 @@ const btnLangEn = document.querySelector('.lang-en');
 
 
 
-switchLang.addEventListener('click', activeBtn);
+switchLang.addEventListener('click', activeLangBtn);
 
-function activeBtn(event) {
+function activeLangBtn(event) {
   if (event.target.classList.contains('lang')) {
     btnsLang.forEach(elem => elem.classList.remove('active-lang'))
   }
@@ -99,38 +99,37 @@ function setTransleteEn() {
   elemForTranslate.forEach(item => item.textContent = i18Obj.en[item.dataset.i18])
 }
 
-switchLang.addEventListener('click', setLocalStorage)
+// switchLang.addEventListener('click', setLocalStorage)
 
-function setLocalStorage(e) {
-  let lang = '';
+// function setLocalStorage(e) {
+//   let lang = '';
 
-  if (e.target.classList.contains('lang-ru')) {
-    lang = 'lang-ru'
-  } else {
-    lang = 'lang-en'
-  }
-  localStorage.setItem('lang', lang);
-}
+//   if (e.target.classList.contains('lang-ru')) {
+//     lang = 'lang-ru'
+//   } else {
+//     lang = 'lang-en'
+//   }
+//   localStorage.setItem('lang', lang);
+// }
 
-window.addEventListener('beforeunload', setLocalStorage)
+// window.addEventListener('beforeunload', setLocalStorage)
 
-function getLocalStorage() {
-  if(localStorage.getItem('lang')) {
-    const lang = localStorage.getItem('lang');
+// function getLocalStorage() {
+//   if(localStorage.getItem('lang')) {
+//     const lang = localStorage.getItem('lang');
     
-    if (lang === 'lang-ru') {
-      btnsLang.forEach(elem => elem.classList.remove('active-lang'))
-      btnLangRu.classList.add('active-lang')
-      setTransleteRu(lang)
-    } else if (lang === 'lang-en') {
-      btnsLang.forEach(elem => elem.classList.remove('active-lang'))
-      btnLangEn.classList.add('active-lang')
-    }
-  }
-}
+//     if (lang === 'lang-ru') {
+//       btnsLang.forEach(elem => elem.classList.remove('active-lang'))
+//       btnLangRu.classList.add('active-lang')
+//       setTransleteRu(lang)
+//     } else if (lang === 'lang-en') {
+//       btnsLang.forEach(elem => elem.classList.remove('active-lang'))
+//       btnLangEn.classList.add('active-lang')
+//     }
+//   }
+// }
 
-window.addEventListener('load', getLocalStorage)
-
+// window.addEventListener('load', getLocalStorage)
 
 // languege 
 
@@ -144,7 +143,7 @@ function activeBtnSeason(event) {
   seasons.forEach(elem => elem.classList.remove('active-season'));
   if (event.target.classList.contains('season')) {
     event.target.classList.add('active-season');
-    let nameBtn = event.target.textContent.toLowerCase();
+    let nameBtn = [...seasons].findIndex((elem) => elem.classList.contains('active-season'));
     portfolioImages.forEach((img, index) => img.src = `./assets/images/seasons/${nameBtn}/${index + 1}.jpg`);
   }
 }
@@ -207,3 +206,4 @@ function toggleTopic() {
     body.classList.remove('change-body');
   }
 }
+
