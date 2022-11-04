@@ -53,6 +53,24 @@ button:hover {
   color: #BDAE82;
 }
 
+.link-theme {
+  color: #1C1C1C;
+  transition: .5s;
+}
+
+.link-theme:hover {
+  color: #fff;
+}
+
+.footer-link {
+  color: #1C1C1C;
+  transition: .5s;
+}
+
+.footer-link:hover {
+  color: #BDAE82;
+}
+
 /*===== Header =====*/
 
 .header-wrapper {
@@ -594,7 +612,7 @@ button:hover {
 
 /*===== MAIN =====*/
 
-@media (max-width: 1130px) {
+@media (max-width: 1140px) {
   .first-block {
     padding: 0;
     margin-bottom: 76px;
@@ -621,23 +639,7 @@ button:hover {
   }
 }
 
-@media (max-width: 781px) {
-
-  .price-items {
-    flex-direction: column;
-    align-items: center;
-  }
-  .price-item:nth-child(2) {
-    margin: 50px 0 50px;
-  }
-
-  .price-item {
-    max-width: 423px;
-    height: 504px;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 790px) {
 
   /*===== Header =====*/
 
@@ -654,7 +656,7 @@ button:hover {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 148px;
+    left: 166px;
     width: 620px;
     transition: 1s;
     background: #000;
@@ -824,6 +826,19 @@ button:hover {
 
     .four-line {
       max-width: 121px;
+    }
+
+    .price-items {
+      flex-direction: column;
+      align-items: center;
+    }
+    .price-item:nth-child(2) {
+      margin: 50px 0 50px;
+    }
+  
+    .price-item {
+      max-width: 423px;
+      height: 504px;
     }
 
     .type {

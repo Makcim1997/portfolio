@@ -67,6 +67,10 @@ function videoRewind() {
 const switchLang = document.querySelector('.switch-lang');
 const btnsLang = document.querySelectorAll('.lang');
 const elemForTranslate = document.querySelectorAll('[data-i18]');
+const btnLangRu = document.querySelector('.lang-ru');
+const btnLangEn = document.querySelector('.lang-en');
+
+
 
 switchLang.addEventListener('click', activeBtn);
 
@@ -77,6 +81,7 @@ function activeBtn(event) {
 
   if (event.target.classList.contains('lang-ru')) {
     setTransleteRu()
+  
   } else if ( event.target.classList.contains('lang-en')) {
     setTransleteEn()
   }
@@ -93,6 +98,39 @@ function setTransleteRu() {
 function setTransleteEn() {
   elemForTranslate.forEach(item => item.textContent = i18Obj.en[item.dataset.i18])
 }
+
+switchLang.addEventListener('click', setLocalStorage)
+
+function setLocalStorage(e) {
+  let lang = '';
+
+  if (e.target.classList.contains('lang-ru')) {
+    lang = 'lang-ru'
+  } else {
+    lang = 'lang-en'
+  }
+  localStorage.setItem('lang', lang);
+}
+
+window.addEventListener('beforeunload', setLocalStorage)
+
+function getLocalStorage() {
+  if(localStorage.getItem('lang')) {
+    const lang = localStorage.getItem('lang');
+    
+    if (lang === 'lang-ru') {
+      btnsLang.forEach(elem => elem.classList.remove('active-lang'))
+      btnLangRu.classList.add('active-lang')
+      setTransleteRu(lang)
+    } else if (lang === 'lang-en') {
+      btnsLang.forEach(elem => elem.classList.remove('active-lang'))
+      btnLangEn.classList.add('active-lang')
+    }
+  }
+}
+
+window.addEventListener('load', getLocalStorage)
+
 
 // languege 
 
@@ -154,7 +192,7 @@ function addHover(event) {
 function toggleTopic() {
   if (event.target.classList.contains('sun-svg')) {
     changeTopic.forEach((elem) => elem.classList.add('active-topic'));
-    links.forEach((elem) => elem.style.color = '#1C1C1C');
+    links.forEach((elem) => elem.classList.remove('link'));
     lines.forEach((line) => line.style.background = '#1C1C1C');
     themeBtns.forEach((btn) => btn.classList.add('change-theme-btn'));
     mainContainer.style.background = `url(./assets/images/bg.jpg)`;
@@ -162,7 +200,7 @@ function toggleTopic() {
     body.classList.add('change-body');
   } else if (event.target.classList.contains('luna-svg')) {
     changeTopic.forEach((elem) => elem.classList.remove('active-topic'));
-    links.forEach((elem) => elem.style.color = '#ffffff');
+    links.forEach((elem) => elem.classList.add('link'));
     lines.forEach((line) => line.style.background = '#BDAE82');
     themeBtns.forEach((btn) => btn.classList.remove('change-theme-btn'));
     mainContainer.style.background = `url(./assets/images/photo.jpg)`;
