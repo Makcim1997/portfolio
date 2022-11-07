@@ -53,6 +53,10 @@
         top: 50%;
         transform: rotate(-45deg);
     }
+
+    .added-hover {
+        background: #BDAE82;
+    }
 }
 
 @media (max-width: 531px) {
